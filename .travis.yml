@@ -11,6 +11,7 @@ services:
 before_install:
 - docker image build --tag nogayama/myapp1:latest .
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker image push nogayama/myapp1:latest
 
 script:
 - echo hello
