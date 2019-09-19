@@ -11,7 +11,7 @@ nogayama	ShinkawasakiSquare
 1. Write Dockerfile
 2. Write .travis.yml
 
-```
+```yaml
 language: bash
 
 services:
@@ -34,4 +34,10 @@ script:
 1. push すると，テストが動く
 
 1. `gem install travis`
-2. `
+2. `travis login --org`
+3. edit .travis.yml by travis command
+	
+	```bash
+	$ travis encrypt DOCKER_USERNAME=nogayama --add env.global
+	$ travis encrypt DOCKER_PASSWORD=PASSWORD --add env.global
+	```
